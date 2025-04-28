@@ -4,7 +4,7 @@ Vehicle Detection system which will detect objects whether it is Cars or Trucks
 # Aim and Objectives
 
 ## Aim
-To create a real-time video Car or Truck detection system which will detect objects based on whether it is Car or Truck.
+To create a real-time video of Car or Truck detection system which will detect objects based on whether it is Car or Truck.
 
 ## Objectives
 ➢ The main objective of the project is to create a program which can be either run on Jetson nano or any pc with YOLOv5 installed and start detecting using the camera module on the device.
@@ -39,12 +39,12 @@ To create a real-time video Car or Truck detection system which will detect obje
 
 ➢ Neural networks and machine learning have been used for these tasks and have obtained good results.
 
-➢ Machine learning algorithms have proven to be very useful in pattern recognition and classification, and hence can be used for fire and smoke detection as well.
+➢ Machine learning algorithms have proven to be very useful in pattern recognition and classification, and hence can be used for Car and Truck detection as well.
 
 Key Steps Involved:
 
 1. Data Collection:
-Gather a dataset of car and truck images. Public datasets like the Stanford Cars dataset or custom datasets can be used.
+Gather a dataset of car and truck images.
 
 2. Data Preprocessing:
 Resize images, normalize pixel values, augment data (like rotation, flipping) to improve model generalization.
@@ -57,6 +57,20 @@ Evaluate model performance using metrics like accuracy, precision, recall, F1-sc
 
 5. Deployment (Optional):
 Deploy the model as a web app or mobile app for real-world use.
+
+# Jetson Nano Compatibility
+➢ The power of modern AI is now available for makers, learners, and embedded developers everywhere.
+
+➢ NVIDIA® Jetson Nano™ Developer Kit is a small, powerful computer that lets you run multiple neural networks in parallel for applications like image classification, object detection, segmentation, and speech processing. All in an easy-to-use platform that runs in as little as 5 watts.
+
+➢ Hence due to ease of process as well as reduced cost of implementation we have used Jetson nano for model detection and training.
+
+➢ NVIDIA JetPack SDK is the most comprehensive solution for building end-to-end accelerated AI applications. All Jetson modules and developer kits are supported by JetPack SDK.
+
+➢ In our model we have used JetPack version 4.6 which is the latest production release and supports all Jetson modules.
+
+# Conclusion
+In this project, a machine learning model was developed to classify images into car and truck categories. By carefully preprocessing the data, applying data augmentation, and selecting an efficient classification model, we achieved good accuracy and reliable performance. The model was able to correctly handle variations in image quality and conditions. This approach shows the potential of machine learning for practical vehicle classification tasks in real-world applications.
 
 https://github.com/user-attachments/assets/c9836a1a-5516-49db-84be-e13d300755bc
 
