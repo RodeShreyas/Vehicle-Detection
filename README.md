@@ -92,16 +92,6 @@ This Module is divided into two parts:
 
 ➢ YOLOv5 was used to train and test our model for various classes like Car and Truck. We trained it for 149 epochs and achieved an accuracy of approximately 91%.
 
-## Setup
-
-# Installation
-
-## Initial Setup
-## Remove unwanted Applications.
-sudo apt-get remove --purge libreoffice*
-sudo apt-get remove --purge thunderbird*
-
-
 # Vehicle Dataset Training
 ## We used Google Colab And Roboflow
 Train our model on colab and download the weights and pass them into yolov5 folder link of project.
