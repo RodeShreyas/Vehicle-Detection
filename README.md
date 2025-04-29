@@ -97,6 +97,10 @@ This Module is divided into two parts:
 # Installation
 
 ## Initial Setup
+## Remove unwanted Applications.
+
+sudo apt-get remove --purge libreoffice*
+sudo apt-get remove --purge thunderbird*
 
 # Vehicle Dataset Training
 ## We used Google Colab And Roboflow
