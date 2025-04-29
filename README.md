@@ -98,48 +98,42 @@ This Module is divided into two parts:
 
 ## Initial Setup
 
-## Remove unwanted Applications.
-sudo apt-get remove --purge libreoffice*
-sudo apt-get remove --purge thunderbird*
+# Vehicle Dataset Training
+## We used Google Colab And Roboflow
+Train our model on colab and download the weights and pass them into yolov5 folder link of project.
 
-## Create Swap file
-sudo fallocate -l 10.0G /swapfile1
-sudo chmod 600 /swapfile1
-sudo mkswap /swapfile1
-sudo vim /etc/fstab
+# Advantages
+➢ Automates vehicle identification, reducing the need for manual monitoring. Saves time and effort in traffic management and surveillance systems.
 
-#################add line###########
-/swapfile1 swap swap defaults 0 0
-## Cuda Configuration
-vim ~/.bashrc
+➢ Improves accuracy over traditional manual or rule-based classification methods. Scalable for use in large-scale systems like toll booths, parking lots, and smart cities.
 
-#############add line #############
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-export
-LD_LIBRARY_PATh=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_P
-ATH}}
-export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+➢ Can work in real-time with proper optimization and hardware support. Adaptable to other vehicle types with minimal changes to the model.
 
-source ~/.bashrc
+➢ Enhances data collection for traffic analysis and planning. Cost-effective solution once deployed, especially for automated systems. Portable implementation possible on edge devices or mobile platforms.
 
-## Update a System
-sudo apt-get update && sudo apt-get upgrade
-## ################pip-21.3.1 setuptools-59.6.0 wheel-0.37.1#############################
-sudo apt install curl
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo python3 get-pip.py
-sudo apt-get install libopenblas-base libopenmpi-dev
-vim ~/.bashrc
-sudo pip3 install pillow
-curl -LO https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl
-mv p57jwntv436lfrd78inwl7iml6p13fzh.whl torch-1.8.0-cp36-cp36m-linux_aarch64.whl
-sudo pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
-sudo python3 -c "import torch; print(torch.cuda.is_available())"
+# Applications
+1. Traffic Monitoring Systems
+Automatically detect and count cars and trucks for traffic flow analysis.
 
-# Installation of torchvision.
-git clone --branch v0.9.1 https://github.com/pytorch/vision torchvision
-cd torchvision/
-sudo python3 setup.py install
+2. Toll Collection Booths
+Classify vehicle types to apply correct toll charges.
+
+3. Smart Parking Systems
+Allocate parking spaces based on vehicle type (car/truck).
+
+4. Environmental Monitoring
+Identify heavy vehicles contributing more to emissions for regulatory purposes.
+
+# Future Scope
+➢ As we know technology is marching towards automation, so this project is one of the step towards automation.
+
+➢ Thus, for more accurate results it needs to be trained for more images, and for a greater number of epochs.
+
+➢ This project can be expanded in several meaningful directions. Future work may include extending the model to classify multiple types of vehicles beyond cars and trucks, enabling more detailed traffic analysis.
+
+➢ Additionally, vehicle-type data can support urban planning, environmental monitoring, and the development of intelligent transportation policies.
+
+➢ In future our model which can be trained and modified with just the addition of images can be very useful.
 # Conclusion
 In this project, a machine learning model was developed to classify images into car and truck categories. By carefully preprocessing the data, applying data augmentation, and selecting an efficient classification model, we achieved good accuracy and reliable performance. The model was able to correctly handle variations in image quality and conditions. This approach shows the potential of machine learning for practical vehicle classification tasks in real-world applications.
 
