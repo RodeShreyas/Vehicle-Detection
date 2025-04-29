@@ -1,4 +1,5 @@
-# Vehicle-Detection
+`sudo apt-get remove --purge libreoffice*`
+sudo apt-get remove --purge thunderbird*# Vehicle-Detection
 Vehicle Detection system which will detect objects whether it is Cars or Trucks
 
 # Aim and Objectives
