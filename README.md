@@ -50,7 +50,7 @@ Gather a dataset of car and truck images.
 Resize images, normalize pixel values, augment data (like rotation, flipping) to improve model generalization.
 
 3. Training:
-Train the model on the labeled images and validate it using a separate validation set.
+Train the model on the images and validate it using a separate validation set.
 
 4. Evaluation:
 Evaluate model performance using metrics like accuracy, precision, recall, F1-score, and confusion matrix.
@@ -69,6 +69,77 @@ Deploy the model as a web app or mobile app for real-world use.
 
 ➢ In our model we have used JetPack version 4.6 which is the latest production release and supports all Jetson modules.
 
+# Methodology
+The Car and Truck detection system is a program that focuses on implementing real time Car and Truck detection.
+
+It is a prototype of a new product that comprises of the main module: Car and Truck detection and then showing on view finder whether the object is Car or Truck or not.
+
+Car and Truck Detection Module
+This Module is divided into two parts:
+1] Car and Truck detection
+➢ Ability to detect the location of object in any input image or frame. The output is the bounding box coordinates on the detected object.
+
+➢ For this task, initially the Dataset library Kaggle was considered. But integrating it was a complex task so then we just downloaded the images from gettyimages.ae and google images and made our own dataset.
+
+➢ This Datasets identifies object in a Bitmap graphic object and returns the bounding box image with annotation of object present in a given image.
+
+2] Classification Detection
+➢ Classification of the object based on whether it is Car and Truck or not.
+
+➢ Hence YOLOv5 which is a model library from roboflow for image classification and vision was used.
+
+➢ There are other models as well but YOLOv5 is smaller and generally easier to use in production. Given it is natively implemented in PyTorch (rather than Darknet), modifying the architecture and exporting and deployment to many environments is straightforward.
+
+➢ YOLOv5 was used to train and test our model for various classes like Car and Truck. We trained it for 149 epochs and achieved an accuracy of approximately 91%.
+
+## Setup
+
+# Installation
+
+## Initial Setup
+
+## Remove unwanted Applications.
+sudo apt-get remove --purge libreoffice*
+sudo apt-get remove --purge thunderbird*
+
+## Create Swap file
+sudo fallocate -l 10.0G /swapfile1
+sudo chmod 600 /swapfile1
+sudo mkswap /swapfile1
+sudo vim /etc/fstab
+
+#################add line###########
+/swapfile1 swap swap defaults 0 0
+## Cuda Configuration
+vim ~/.bashrc
+
+#############add line #############
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export
+LD_LIBRARY_PATh=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_P
+ATH}}
+export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+
+source ~/.bashrc
+
+## Update a System
+sudo apt-get update && sudo apt-get upgrade
+## ################pip-21.3.1 setuptools-59.6.0 wheel-0.37.1#############################
+sudo apt install curl
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python3 get-pip.py
+sudo apt-get install libopenblas-base libopenmpi-dev
+vim ~/.bashrc
+sudo pip3 install pillow
+curl -LO https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl
+mv p57jwntv436lfrd78inwl7iml6p13fzh.whl torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+sudo pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+sudo python3 -c "import torch; print(torch.cuda.is_available())"
+
+# Installation of torchvision.
+git clone --branch v0.9.1 https://github.com/pytorch/vision torchvision
+cd torchvision/
+sudo python3 setup.py install
 # Conclusion
 In this project, a machine learning model was developed to classify images into car and truck categories. By carefully preprocessing the data, applying data augmentation, and selecting an efficient classification model, we achieved good accuracy and reliable performance. The model was able to correctly handle variations in image quality and conditions. This approach shows the potential of machine learning for practical vehicle classification tasks in real-world applications.
 
