@@ -1,5 +1,4 @@
-#sudo apt-get remove --purge libreoffice*
-#sudo apt-get remove --purge thunderbird*# Vehicle-Detection
+# Vehicle Detection
 Vehicle Detection system which will detect objects whether it is Cars or Trucks
 
 # Aim and Objectives
@@ -92,6 +91,12 @@ This Module is divided into two parts:
 ➢ There are other models as well but YOLOv5 is smaller and generally easier to use in production. Given it is natively implemented in PyTorch (rather than Darknet), modifying the architecture and exporting and deployment to many environments is straightforward.
 
 ➢ YOLOv5 was used to train and test our model for various classes like Car and Truck. We trained it for 149 epochs and achieved an accuracy of approximately 91%.
+# Setup
+## Installation
+## Initial Setup
+## Remove unwanted Applications.
+# sudo apt-get remove --purge libreoffice*
+# sudo apt-get remove --purge thunderbird*
 
 # Vehicle Dataset Training
 ## We used Google Colab And Roboflow
