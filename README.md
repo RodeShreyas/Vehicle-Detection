@@ -69,9 +69,6 @@ Deploy the model as a web app or mobile app for real-world use.
 
 ➢ In our model we have used JetPack version 4.6 which is the latest production release and supports all Jetson modules.
 
-`sudo apt-get remove --purge libreoffice*`
-`sudo apt-get remove --purge thunderbird*`
-
 # Methodology
 The Car and Truck detection system is a program that focuses on implementing real time Car and Truck detection.
 
