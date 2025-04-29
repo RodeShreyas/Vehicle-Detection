@@ -99,8 +99,7 @@ This Module is divided into two parts:
 ## Initial Setup
 ## Remove unwanted Applications.
 
-"sudo apt-get remove --purge libreoffice*
-sudo apt-get remove --purge thunderbird*"
+!git clone https://github.com/ultralytics/yolov5  # clone repo
 
 # Vehicle Dataset Training
 ## We used Google Colab And Roboflow
