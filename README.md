@@ -44,7 +44,7 @@ To create a real-time video of Car or Truck detection system which will detect o
 Key Steps Involved:
 
 1. Data Collection:
-Gather a dataset of car and truck images.
+Gather a dataset of car and truck images form Google.
 
 2. Data Preprocessing:
 Resize images, normalize pixel values, augment data (like rotation, flipping) to improve model generalization.
@@ -52,10 +52,7 @@ Resize images, normalize pixel values, augment data (like rotation, flipping) to
 3. Training:
 Train the model on the images and validate it using a separate validation set.
 
-4. Evaluation:
-Evaluate model performance using metrics like accuracy, precision, recall, F1-score, and confusion matrix.
-
-5. Deployment (Optional):
+4. Deployment (Optional):
 Deploy the model as a web app or mobile app for real-world use.
 
 # Jetson Nano Compatibility
