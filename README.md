@@ -20,8 +20,6 @@ To create a real-time video of Car or Truck detection system which will detect o
 
 ➢ An object is classified based on whether it is Car or Truck is detected by the live feed from the system’s camera.
 
-➢ We have completed this project on jetson nano which is a very small computational device.
-
 ➢ A lot of research is being conducted in the field of Computer Vision and Machine Learning (ML), where machines are trained to identify various objects from one another. Machine Learning provides various techniques through which various objects can be detected.
 
 ➢ One such technique is to use YOLOv5 with Roboflow model, which generates a small size trained model and makes ML integration easier.
@@ -54,17 +52,6 @@ Train the model on the images and validate it using a separate validation set.
 
 4. Deployment (Optional):
 Deploy the model as a web app or mobile app for real-world use.
-
-# Jetson Nano Compatibility
-➢ The power of modern AI is now available for makers, learners, and embedded developers everywhere.
-
-➢ NVIDIA® Jetson Nano™ Developer Kit is a small, powerful computer that lets you run multiple neural networks in parallel for applications like image classification, object detection, segmentation, and speech processing. All in an easy-to-use platform that runs in as little as 5 watts.
-
-➢ Hence due to ease of process as well as reduced cost of implementation we have used Jetson nano for model detection and training.
-
-➢ NVIDIA JetPack SDK is the most comprehensive solution for building end-to-end accelerated AI applications. All Jetson modules and developer kits are supported by JetPack SDK.
-
-➢ In our model we have used JetPack version 4.6 which is the latest production release and supports all Jetson modules.
 
 # Methodology
 The Car and Truck detection system is a program that focuses on implementing real time Car and Truck detection.
